@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Jena_Endpoint</groupId>
+  <artifactId>Jena_Endpoint</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<httpclient.version>4.5.12</httpclient.version>
+    <httpcore.version>4.4.13</httpcore.version>
+    <owlapi.version>5.1.13</owlapi.version>
+    <poi.version>4.1.2</poi.version>
+    <rdf4j.version>3.1.2</rdf4j.version>
+    <semargl.version>0.7</semargl.version>
+    <slf4j.logger.version>1.7.30</slf4j.logger.version>
+    <tika.version>1.24</tika.version>
+    <openie_2.11.version>4.2.6</openie_2.11.version>
+    <openregex.version>1.1.1</openregex.version>
+    <jackson.version>2.12.2</jackson.version>
+    <commons-io.version>2.6</commons-io.version>
+  </properties>
+  
+  <dependencies>
+  
+  		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.jena</groupId>
+		    <artifactId>apache-jena-libs</artifactId>
+		    <type>pom</type>
+		    <version>4.2.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20180130</version>
+		</dependency>
+								
+  </dependencies>
+  
+  <!-- 
+  <dependencyManagement>
+  
+  <dependencies>
+  
+  <dependency>
+	  <groupId>org.apache.any23</groupId>
+	  <artifactId>apache-any23</artifactId>
+	  <version>2.5</version>
+	  <type>pom</type>
+	</dependency>
+	
+	<dependency>
+	  <groupId>org.apache.any23</groupId>
+	  <artifactId>apache-any23-core</artifactId>
+	  <version>2.5</version>
+	</dependency>
+  
+  </dependencies>
+  
+  </dependencyManagement>
+  -->
+
+    
+  
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>15</source>
+          <target>15</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
